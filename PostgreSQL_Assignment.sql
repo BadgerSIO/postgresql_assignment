@@ -3,7 +3,6 @@ CREATE TABLE rangers (
   name TEXT NOT NULL,
   region TEXT NOT NULL
 );
-DROP TYPE IF EXISTS conservation_status_enum;
 
 CREATE TYPE conservation_status_enum AS ENUM (
   'Endangered',
