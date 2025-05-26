@@ -59,3 +59,14 @@ CREATE TABLE test_varchar (
     name VARCHAR(50)
 );
     </code> </pre>
+
+## 5. Explain the purpose of the WHERE clause in a SELECT statement.
+
+WHERE ক্লজ ব্যবহার করা হয় SELECT স্টেটমেন্টে নির্দিষ্ট শর্ত অনুযায়ী ডেটা ফিল্টার করার জন্য। এটি শুধুমাত্র সেই রেকর্ডগুলো ফিরিয়ে দেয় যেগুলো শর্ত পূরণ করে।
+উদাহরণ:
+
+<pre lang="markdown"> <code> 
+SELECT * FROM users WHERE age > 18;
+    </code> </pre>
+
+এখানে শুধু ১৮ বছরের বেশি বয়সী ব্যবহারকারীদের তথ্য দেখাবে।
