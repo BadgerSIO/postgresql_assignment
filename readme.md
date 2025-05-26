@@ -6,4 +6,9 @@ PostgreSQL হলো একটি ডাটাবেজ ম্যানেজম
 
 PostgreSQL এ database schema কাজ কি আর তা যদি আমরা সহজ ভাষায় বলতে চাই , এটি একটি ডাটাবেজের অভ্যন্তরে টেবিল, ভিউ, ফাংশন, টাইপ এদেরকে ক্যাটাগরির অভ্যন্তরে নিয়ে আসতে পারে। যার ফলে আমাদের ডাটাবেজ অনেকটা সাজানো এবং গোছানো হয়। তাছাড়া আমরা চাইলে schema ভেদে ডাটাবেজ ব্যবহারকারীদের access দিতে পারি। ফলে এটি আমাদের সিস্টেমটিকে আরো সিকিউর করে তোলে। নিচে কিভাবে একটি schema তৈরি করা হয় তা দেওয়া হল
 
-<pre lang="markdown"> <code>```sql CREATE SCHEMA finance; CREATE TABLE finance.transactions ( id SERIAL PRIMARY KEY, amount NUMERIC, date DATE ); ```</code> </pre>
+<pre lang="markdown"> <code> CREATE SCHEMA finance; 
+CREATE TABLE finance.transactions ( 
+    id SERIAL PRIMARY KEY, 
+    amount NUMERIC, 
+    date DATE );
+    </code> </pre>
