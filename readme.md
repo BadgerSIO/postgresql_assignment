@@ -12,3 +12,32 @@ CREATE TABLE finance.transactions (
     amount NUMERIC, 
     date DATE );
     </code> </pre>
+
+## 3. Explain the Primary Key and Foreign Key concepts in PostgreSQL.
+
+Primary Key হল টেবিলের মধ্যে এমন একটি কলাম যেটি প্রত্যেকটি row কে আলাদাভাবে আইডেন্টিফাই করতে পারে। টেবিলে প্রতিটি row এর প্রাইমারি কি এর ভ্যালু আলাদা আলাদা হয়। নিচের প্রাইমারি কি এর একটি উদাহরণ দেওয়া হল
+
+<pre lang="markdown"> <code> 
+CREATE TABLE rangers (
+    ranger_id SERIAL PRIMARY KEY,
+    name TEXT,
+    region TEXT
+);
+
+    </code> </pre>
+
+এখানে আমরা দেখতে পাই rangers_id একটি প্রাইমারি key
+
+অন্যদিকে Foreign Key দ্বারা দুটি টেবিলের মাঝে সম্পর্ক স্থাপন করা হয়। একটি টেবিলের Foreign Key দ্বারা অন্য একটি টেবিলের প্রাইমারি কি কে ইঙ্গিত করা হয়। নিচে একটি করেন কি এর উদাহরণ দেওয়া হলো
+
+<pre lang="markdown"> <code> 
+CREATE TABLE sightings (
+    sighting_id SERIAL PRIMARY KEY,
+    ranger_id INT REFERENCES rangers(ranger_id),
+    species_id INT,
+    sighting_time TIMESTAMP,
+    location TEXT
+);
+
+
+    </code> </pre>
