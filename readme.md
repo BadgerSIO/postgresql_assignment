@@ -38,6 +38,24 @@ CREATE TABLE sightings (
     sighting_time TIMESTAMP,
     location TEXT
 );
+    </code> </pre>
 
+## 4. What is the difference between the VARCHAR and CHAR data types?
 
+VARCHAR এবং CHAR ডাটা টাইপের মধ্যে মূল পার্থক্য হল CHAR এর ক্ষেত্রে আমরা চাইলে ডাটা কত ক্যারেক্টার হবে তা নির্দিষ্ট ভাবে বলে দিতে পারি । নিচে একটি CHAR এর উদাহরণ দেওয়া হল
+
+<pre lang="markdown"> <code> 
+CREATE TABLE test_char (
+    code CHAR(5)
+);
+    </code> </pre>
+
+এখানে আমি যদি ৫ সংখ্যক ক্যারেক্টার নির্দিষ্ট করে দেই কিন্তু ডাটা insert এর ক্ষেত্রে আমি শুধু দুই ক্যারেক্টারের ডাটা ইনসার্ট করি তবে বাকি তিন ক্যারেক্টার সে space হিসেবে নিয়ে ডাটাটি সংরক্ষণ করে।
+অন্যদিকে VARCHAR ক্ষেত্রে আমরা শুধুমাত্র সর্বোচ্চ কত ক্যারেক্টার এর ডাটা হবে তা নির্ধারণ করে দিই পরবর্তীতে আমরা যত ক্যারেক্টারে না কেন তা এক্সট্রা কোন স্পেস যোগ করবে না।
+নিচে একটি VARCHAR উদাহরণ দেওয়া হল
+
+<pre lang="markdown"> <code> 
+CREATE TABLE test_varchar (
+    name VARCHAR(50)
+);
     </code> </pre>
